@@ -7,6 +7,10 @@ class World
     self.class.new(next_cells)
   end
 
+  def tick!
+    @cells = next_cells
+  end
+
   def board
     @cells
   end

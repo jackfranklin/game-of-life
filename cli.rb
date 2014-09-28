@@ -77,7 +77,7 @@ end
 
 while true
   print_world(world)
-  world = world.tick
+  world.tick!
   sleep 0.5
   puts ''
 end
