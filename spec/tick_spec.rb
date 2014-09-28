@@ -1,8 +1,9 @@
 require_relative "../world"
 
 describe World do
-  let(:next_board) { world.tick.board }
   describe "World#tick" do
+    let(:next_board) { world.tick.board }
+
     describe "with an empty world" do
       let(:world) { World.new([]) }
       it "stays empty" do
@@ -55,6 +56,7 @@ describe World do
 
   describe "World#neighbours_for_cell" do
     let(:neighbours) { world.neighbours_for_cell(cell) }
+
     describe "given a cell with two neighbours" do
       let(:cell) { [1, 0] }
       let(:world) { World.new([[0, 0], [1, 0], [2, 0]]) }
@@ -70,6 +72,5 @@ describe World do
         expect(neighbours).to eq(3)
       end
     end
-
   end
 end
