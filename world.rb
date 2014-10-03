@@ -9,6 +9,7 @@ class World
 
   def tick!
     @cells = next_cells
+    self
   end
 
   def board
